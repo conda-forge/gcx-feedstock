@@ -11,7 +11,7 @@ source:
   - url: https://github.com/grafana/grafana/raw/refs/heads/main/LICENSE
     sha256: 0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0
     target_directory: grafana-LICENSE
-  - if: windows
+  - if: win
     then:
       - url: https://github.com/mattn/go-localereader/raw/refs/heads/master/LICENSE
         sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3
@@ -59,7 +59,7 @@ about:
     - LICENSE
     - library_licenses/
     - grafana-LICENSE/LICENSE
-    - if: windows
+    - if: win
       then:
         - go-localereader-LICENSE/LICENSE
   documentation: https://pkg.go.dev/github.com/grafana/gcx
