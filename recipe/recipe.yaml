@@ -11,6 +11,9 @@ source:
   - url: https://github.com/grafana/grafana/raw/refs/heads/main/LICENSE
     sha256: 0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0
     target_directory: grafana-LICENSE
+  - url: https://github.com/alecthomas/chroma/raw/refs/heads/master/COPYING
+    sha256: 13654b052f885cb3fa47d7343e13975d9c8a64c3bcd84993c35d5eb01f22b23f
+    target_directory: chroma-LICENSE
   - if: win
     then:
       - url: https://github.com/mattn/go-localereader/raw/refs/heads/master/LICENSE
@@ -20,7 +23,7 @@ source:
 build:
   number: 0
   script:
-    - go-licenses save ./cmd/gcx --ignore github.com/grafana/grafana/pkg/apimachinery --ignore github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1 --ignore github.com/mattn/go-localereader --save_path ./library_licenses
+    - go-licenses save ./cmd/gcx --ignore github.com/grafana/grafana/pkg/apimachinery --ignore github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1 --ignore github.com/mattn/go-localereader --ignore github.com/alecthomas/chroma/v2 --save_path ./library_licenses
     - if: unix
       then:
         - go build -v -o $PREFIX/bin/gcx -ldflags="-s -w" ./cmd/gcx
@@ -59,6 +62,7 @@ about:
     - LICENSE
     - library_licenses/
     - grafana-LICENSE/LICENSE
+    - chroma-LICENSE/COPYING
     - if: win
       then:
         - go-localereader-LICENSE/LICENSE
