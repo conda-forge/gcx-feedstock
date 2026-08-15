@@ -3,6 +3,27 @@ About gcx-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gcx-feedstock/blob/main/LICENSE.txt)
 
+
+About gcx
+---------
+
+Home: https://github.com/grafana/gcx
+
+Package license: Apache-2.0
+
+Summary: A CLI for managing Grafana Cloud resources. Optimized for agentic usage.
+
+Development: https://github.com/grafana/gcx
+
+Documentation: https://pkg.go.dev/github.com/grafana/gcx
+
+gcx is a CLI for Grafana. It gives you and your AI coding agent structured access to your Grafana instance: dashboards, alerts, SLOs, metrics, logs, traces, and more.
+
+gcx works with any agentic coding tool. It ships with a suite of agent skills for common workflows like alert investigation, dashboard creation and GitOps, SLO management, and observability setup - ready to use out of the box.
+
+About gcx
+---------
+
 Home: https://github.com/grafana/gcx
 
 Package license: Apache-2.0
@@ -48,13 +69,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gcx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=28549&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gcx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -80,31 +94,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `gcx` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install gcx
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install gcx
 ```
 
-It is possible to list all of the versions of `gcx` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add gcx
+# for installing globally
+pixi global install gcx
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `gcx` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search gcx --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search gcx --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search gcx --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -116,6 +172,8 @@ mamba repoquery whoneeds gcx --channel conda-forge
 # List dependencies of `gcx`:
 mamba repoquery depends gcx --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
