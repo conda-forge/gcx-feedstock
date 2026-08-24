@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0"
+  version: "1.1.1"
 
 package:
   name: gcx
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/grafana/gcx/archive/v${{ version }}.tar.gz
-    sha256: 08ac57cbde273f0ca929e7ca32a90f0319a2dc65a961b637135331a28ce65887
+    sha256: 67d80291d3305366495aa2f60cf7f3f9b673f029dc123a7e45c4871ae4c2ff1f
   - url: https://github.com/grafana/grafana/raw/refs/heads/main/LICENSE
     sha256: 0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0
     target_directory: grafana-LICENSE
